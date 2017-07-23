@@ -1,28 +1,29 @@
-# Angular
+# Installing Bootstrap
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.3.
+<div class="highlight highlight-source-shell"><pre>
 
-## Development server
+<span class="pl-c"><span class="pl-c">#</span> version 4.x</span>
+npm install bootstrap@next --save</pre></div>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Configuring Project
+<p>Now that the project is set up it must be configured to include the bootstrap CSS.</p>
+<ul>
+<li>
+<p>Open the file <code>.angular-cli.json</code> from the root of your project.</p>
+</li>
+<li>
+<p>Under the property <code>apps</code> the first item in that array is the default application.</p>
+</li>
+<li>
+<p>There is a property <code>styles</code> which allows external global styles to be applied to your application.</p>
+</li>
+<li>
+<p>Specify the path to <code>bootstrap.min.css</code></p>
+<p>It should look like the following when you are done:</p>
+<div class="highlight highlight-source-json"><pre><span class="pl-s"><span class="pl-pds">"</span>styles<span class="pl-pds">"</span></span>: [
+  <span class="pl-s"><span class="pl-pds">"</span>../node_modules/bootstrap/dist/css/bootstrap.min.css<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>styles.css<span class="pl-pds">"</span></span>
+],</pre></div>
+</li>
+</ul>
+<p><strong>Note:</strong> When you make changes to <code>.angular-cli.json</code> you will need to re-start <code>ng serve</code> to pick up configuration changes.</p>
