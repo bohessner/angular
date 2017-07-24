@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
+<!-- <div class="container">
   <div class="jumbotron">
     <h1>Velkommen</h1>
     <h2>Angular & Bootstrap Demo</h2>
@@ -22,3 +22,23 @@
       </a>
     </div>
   </div>
+
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <div class="container">
+        <a class="navbar-brand">Angular Router</a>
+        <ul class="nav navbar-nav" routerLinkActive="active">
+            <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="about">About</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="courses">Courses</a></li>
+        </ul>
+    </div>
+</nav>
+-->
+<h1>Angular Router</h1>
+<nav>
+  <a routerLink="home" routerLinkActive="active">Home</a>
+  <a routerLink="about" routerLinkActive="active">About</a>
+  <a routerLink="courses" routerLinkActive="active">Courses</a>
+</nav>
+<br/>
+<router-outlet></router-outlet>
