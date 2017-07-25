@@ -1,3 +1,48 @@
 <h3>
   courses works!
 </h3>
+
+<pre>{{ model | json }}</pre>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Courses this summmer
+  </div>
+  <div class="panel-body">
+    <div class="list-group">
+      <a *ngFor="let item of model" ng-href="#" class="list-group-item">
+            <span class="badge" *ngIf="item.price > 2000">></span>
+            <div>{{item.name}}</div>
+          </a>
+    </div>
+  </div>
+</div>
+
+<table class="table table-striped" [mfData]="model" #mf="mfDataTable" [mfRowsOnPage]="5">
+    <thead>
+    <tr>
+        <th style="width: 10%">
+            <mfDefaultSorter by="name">Name</mfDefaultSorter>
+        </th>
+        <th style="width: 80%">
+            <mfDefaultSorter by="description">Description</mfDefaultSorter>
+        </th>
+        <th style="width: 10%">
+            <mfDefaultSorter by="price">Price</mfDefaultSorter>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of mf.data">
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td class="text-right">{{item.price}}</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="3">
+            <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+        </td>
+    </tr>
+    </tfoot>
+</table>

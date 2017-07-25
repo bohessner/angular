@@ -1,0 +1,16 @@
+
+   [
+    {
+      "name": "Angular beginner", "description": "We start out here", "price" : 1000
+    },
+    {
+      "name": "Angular regular", "description": "Now we learn to talk Angular", "price" : 2000
+    },
+    {
+      "name": "Angular advanced", "description": "Let in the data", "price" : 3000
+    },
+    {
+      "name": "Angular ninja", "description": "Get ready to the big bang", "price" : 5500
+    }
+  ]
+
